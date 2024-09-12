@@ -129,3 +129,11 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.book-item img {
+    width: 150px;  /* Set the desired width */
+    height: 200px; /* Set the desired height */
+    object-fit: cover;  /* Ensures the image maintains its aspect ratio */
+    border-radius: 5px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow for better appearance */
+}
