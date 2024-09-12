@@ -4,40 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mustaqeem Bookshop</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
+        <img src="images/logo.png" alt="Mustaqeem Bookshop Logo" class="logo">
         <nav>
-            <div id="logo">Mustaqeem Bookshop</div>
-            <ul id="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Books</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <input type="text" id="searchBar" placeholder="Search for books...">
+            <a href="#">Home</a>
+            <a href="#">Catalog</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
         </nav>
     </header>
 
     <main>
-        <section id="featured">
-            <h2>Featured Books</h2>
-            <div class="carousel" id="carousel-container"></div>
+        <section class="hero">
+            <h1>Welcome to Mustaqeem Bookshop</h1>
+            <p>“The seeking of knowledge is obligatory for every Muslim.” - Hadith</p>
+            <button id="shopNow">Shop Now</button>
         </section>
 
-        <section id="book-section">
-            <aside>
-                <h3>Categories</h3>
-                <div id="category-filter">
-                    <button onclick="filterCategory('Islamic')">Islamic</button>
-                </div>
-                <h3>Cart</h3>
-                <ul id="cartItems"></ul>
-                <p>Total: $<span id="cartTotal">0.00</span></p>
-            </aside>
-
-            <section id="book-list"></section>
+        <section class="featured-books">
+            <h2>Featured Books</h2>
+            <div id="bookContainer" class="book-container">
+                <!-- Dynamic content will be injected here -->
+            </div>
         </section>
     </main>
 
@@ -45,6 +36,6 @@
         <p>&copy; 2024 Mustaqeem Bookshop. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

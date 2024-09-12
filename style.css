@@ -1,199 +1,94 @@
-/* General Styles */
-* {
+/* styles.css */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #022036; /* Dark background color */
-    color: #ffffff; /* White text color */
-    line-height: 1.6;
-}
-
-/* Header Styles */
 header {
-    background-color: #03396c; /* Slightly lighter blue for header */
-    padding: 20px;
-    color: #ffffff;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-nav {
+    background-color: #1e1e1e;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#logo {
-    font-size: 1.8em;
+.logo {
+    height: 50px;
+}
+
+nav a {
+    color: #e0e0e0;
+    margin: 0 15px;
+    text-decoration: none;
     font-weight: bold;
 }
 
-#nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-#nav-links li a {
+.hero {
+    background: url('images/hero-background.jpg') no-repeat center center;
+    background-size: cover;
     color: #ffffff;
-    text-decoration: none;
-    padding: 10px;
-    transition: color 0.3s;
+    text-align: center;
+    padding: 100px 20px;
 }
 
-#nav-links li a:hover {
-    color: #b4d3e4; /* Light blue on hover */
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
 }
 
-#searchBar {
-    padding: 10px;
-    width: 250px;
-    border-radius: 5px;
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #1e88e5;
+    color: #ffffff;
     border: none;
-    background-color: #03396c;
-    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-/* Featured Section */
-#featured {
-    background-color: #1f4f73; /* Slightly darker blue */
+button:hover {
+    background-color: #1565c0;
+}
+
+.featured-books {
     padding: 20px;
-    color: #ffffff;
-    text-align: center;
 }
 
-.carousel {
+.book-container {
     display: flex;
-    overflow-x: auto;
+    flex-wrap: wrap;
     gap: 20px;
-    padding: 10px;
 }
 
-.book-slide {
+.book {
+    background-color: #1e1e1e;
+    padding: 10px;
+    border-radius: 5px;
     width: 200px;
-    background-color: #03396c;
-    color: #ffffff;
     text-align: center;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
 }
 
-.book-slide img {
+.book img {
     width: 100%;
     height: auto;
     border-radius: 5px;
 }
 
-.book-slide:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-}
-
-/* Main Content */
-main {
-    padding: 20px;
-    display: flex;
-}
-
-#book-section {
-    display: flex;
-    flex: 1;
-}
-
-aside {
-    background-color: #03396c;
-    padding: 20px;
-    width: 300px;
-    border-radius: 10px;
-    margin-right: 20px;
-}
-
-#category-filter {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#category-filter button {
-    background-color: #1f4f73;
-    color: #ffffff;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    margin: 5px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-#category-filter button:hover {
-    background-color: #03396c;
-}
-
-.book-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    flex: 1;
-}
-
-.book-item {
-    background-color: #03396c; /* Dark blue background for book items */
-    padding: 15px;
-    border-radius: 10px;
-    width: 250px;
-    text-align: center;
-    color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.book-item img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.book-item:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-}
-
-.book-item h3 {
+.book h3 {
+    font-size: 1.2em;
     margin: 10px 0;
-    font-size: 1.3em;
 }
 
-.book-item p {
-    font-size: 1em;
-}
-
-.book-item button {
-    background-color: #1f4f73;
-    color: #ffffff;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.book-item button:hover {
-    background-color: #03396c;
-}
-
-/* Footer Styles */
 footer {
-    background-color: #03396c;
-    color: #ffffff;
-    text-align: center;
+    background-color: #1e1e1e;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    text-align: center;
 }
