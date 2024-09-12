@@ -17,6 +17,9 @@ header {
     background-color: #03396c; /* Slightly lighter blue for header */
     padding: 20px;
     color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav {
@@ -26,7 +29,7 @@ nav {
 }
 
 #logo {
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: bold;
 }
 
@@ -72,7 +75,7 @@ nav {
 }
 
 .book-slide {
-    width: 180px;
+    width: 200px;
     background-color: #03396c;
     color: #ffffff;
     text-align: center;
@@ -142,7 +145,7 @@ aside {
     background-color: #03396c; /* Dark blue background for book items */
     padding: 15px;
     border-radius: 10px;
-    width: 240px;
+    width: 250px;
     text-align: center;
     color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -151,7 +154,7 @@ aside {
 
 .book-item img {
     width: 100%;
-    height: 250px;
+    height: 300px;
     object-fit: cover;
     border-radius: 5px;
 }
@@ -163,7 +166,7 @@ aside {
 
 .book-item h3 {
     margin: 10px 0;
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
 .book-item p {
