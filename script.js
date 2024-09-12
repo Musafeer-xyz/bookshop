@@ -1,21 +1,16 @@
-// Array of book objects
 const books = [
-    { id: 1, title: "The Midnight Library", author: "Matt Haig", category: "Fiction", price: 14.99, image: "images/book1.jpg" },
-    { id: 2, title: "Educated", author: "Tara Westover", category: "Non-fiction", price: 19.99, image: "images/book2.jpg" },
-    { id: 3, title: "Spider-Man: Life Story", author: "Chip Zdarsky", category: "Comics", price: 24.99, image: "images/book3.jpg" },
-    { id: 4, title: "The Silent Patient", author: "Alex Michaelides", category: "Mystery", price: 11.99, image: "images/book4.jpg" }
+    { id: 1, title: "The Quran", author: "Various", category: "Islamic", price: 24.99, image: "images/book1.jpg" },
+    { id: 2, title: "Hadith Collection", author: "Various", category: "Islamic", price: 29.99, image: "images/book2.jpg" },
+    { id: 3, title: "Islamic History", author: "Various", category: "Islamic", price: 19.99, image: "images/book3.jpg" },
+    { id: 4, title: "Understanding Islam", author: "Various", category: "Islamic", price: 14.99, image: "images/book4.jpg" }
 ];
 
-// Cart array
 const cart = [];
-
-// Get DOM elements
 const bookList = document.getElementById('book-list');
 const cartItems = document.getElementById('cartItems');
 const cartTotal = document.getElementById('cartTotal');
 const carouselContainer = document.getElementById('carousel-container');
 
-// Function to display featured books in the carousel
 function displayFeaturedBooks() {
     books.forEach(book => {
         const slide = document.createElement('div');
@@ -28,7 +23,6 @@ function displayFeaturedBooks() {
     });
 }
 
-// Function to display books
 function displayBooks(booksToDisplay) {
     bookList.innerHTML = '';
     booksToDisplay.forEach(book => {
@@ -45,14 +39,12 @@ function displayBooks(booksToDisplay) {
     });
 }
 
-// Function to add book to cart
 function addToCart(id) {
     const book = books.find(book => book.id === id);
     cart.push(book);
     updateCart();
 }
 
-// Function to update cart
 function updateCart() {
     cartItems.innerHTML = '';
     let total = 0;
@@ -65,13 +57,11 @@ function updateCart() {
     cartTotal.textContent = total.toFixed(2);
 }
 
-// Function to filter books by category
 function filterCategory(category) {
     const filteredBooks = books.filter(book => book.category === category);
     displayBooks(filteredBooks);
 }
 
-// Function to handle search
 document.getElementById('searchBar').addEventListener('input', function(e) {
     const searchText = e.target.value.toLowerCase();
     const filteredBooks = books.filter(book => 
