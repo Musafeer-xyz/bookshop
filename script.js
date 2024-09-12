@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.getElementById('shopNow').addEventListener('click', () => {
-        window.location.href = '#catalog'; // Redirect to catalog section or page
+        alert('Redirecting to catalog...');
+        // Replace with actual redirection if needed
     });
 });
