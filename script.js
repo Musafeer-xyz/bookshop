@@ -4,15 +4,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const books = [
         {
-            title: 'Book One',
-            author: 'Author One',
+            title: 'The Book of Knowledge',
+            author: 'John Doe',
             cover: 'images/book1.jpg'
         },
         {
-            title: 'Book Two',
-            author: 'Author Two',
+            title: 'Learning Python',
+            author: 'Jane Smith',
             cover: 'images/book2.jpg'
         },
+        {
+            title: 'Introduction to JavaScript',
+            author: 'Alice Johnson',
+            cover: 'images/book3.jpg'
+        },
+        {
+            title: 'Web Development Essentials',
+            author: 'Bob Brown',
+            cover: 'images/book4.jpg'
+        }
         // Add more book objects here
     ];
 
@@ -28,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.getElementById('shopNow').addEventListener('click', () => {
-        alert('Redirecting to shop...');
-        // Redirect to catalog page or handle shopping functionality
+        window.location.href = '#catalog'; // Redirect to catalog section or page
     });
 });
