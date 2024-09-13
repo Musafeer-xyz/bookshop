@@ -9,8 +9,8 @@ body {
 }
 
 body.night-mode {
-    background-color: #1e1e1e;
-    color: #f4f4f4;
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
 header {
@@ -104,11 +104,17 @@ button#night-mode-toggle:hover {
     border: 1px solid #ddd;
     padding: 10px;
     margin: 10px;
-    width: 200px;
+    width: 250px;
     text-align: center;
     background-color: #f5f5f5;
     border-radius: 8px;
     transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-list .product-item img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
 }
 
 .product-list .product-item:hover {

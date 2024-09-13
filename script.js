@@ -2,12 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const productList = document.querySelector('.product-list');
     const cartList = document.querySelector('.cart-list');
     const cart = [];
-    
+
     const products = [
-        { id: 1, name: 'The Quran', price: 20, category: 'quran' },
-        { id: 2, name: 'Hadith Collection', price: 15, category: 'hadith' },
-        { id: 3, name: 'Islamic History', price: 25, category: 'history' },
-        { id: 4, name: 'Children’s Quran', price: 18, category: 'children' }
+        { id: 1, name: 'The Quran', price: 20, category: 'quran', image: 'images/book1.jpg' },
+        { id: 2, name: 'Hadith Collection', price: 15, category: 'hadith', image: 'images/book2.jpg' },
+        { id: 3, name: 'Islamic History', price: 25, category: 'history', image: 'images/book3.jpg' },
+        { id: 4, name: 'Children’s Quran', price: 18, category: 'children', image: 'images/book4.jpg' }
     ];
 
     function renderProducts(category = '') {
@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const productItem = document.createElement('div');
             productItem.classList.add('product-item');
             productItem.innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
                 <h3>${product.name}</h3>
                 <p>$${product.price}</p>
                 <button data-id="${product.id}">Add to Cart</button>
