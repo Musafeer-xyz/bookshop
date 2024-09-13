@@ -24,4 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Your message has been sent!');
         contactForm.reset();
     });
+
+    const nightModeToggle = document.getElementById('night-mode-toggle');
+    nightModeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('night-mode');
+        nightModeToggle.textContent = document.body.classList.contains('night-mode') ? 'Day Mode' : 'Night Mode';
+    });
 });

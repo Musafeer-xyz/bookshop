@@ -1,12 +1,20 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #ffffff;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.night-mode {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
 }
 
 header {
-    background-color: #333;
+    background-color: #004d40;
     color: white;
     padding: 10px 0;
 }
@@ -36,12 +44,31 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #80cbc4;
+}
+
+button#night-mode-toggle {
+    background-color: #009688;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button#night-mode-toggle:hover {
+    background-color: #00796b;
 }
 
 .banner {
-    background-color: #f4f4f4;
+    background-color: #80cbc4;
     padding: 50px;
     text-align: center;
+    color: #004d40;
 }
 
 .product-list {
@@ -56,10 +83,18 @@ nav ul li a {
     margin: 10px;
     width: 200px;
     text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-list .product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 footer {
-    background-color: #333;
+    background-color: #004d40;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -86,12 +121,14 @@ form input, form textarea {
 
 form button {
     padding: 10px;
-    background-color: #333;
+    background-color: #004d40;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 form button:hover {
-    background-color: #555;
+    background-color: #003d33;
 }
