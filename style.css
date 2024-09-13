@@ -1,174 +1,97 @@
-/* Base Styling */
 body {
-    background-color: #121212;
-    color: #e0e0e0;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    transition: background-color 0.3s, color 0.3s;
+    box-sizing: border-box;
 }
 
 header {
-    background-color: #1e1e1e;
-    padding: 15px;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 0 20px;
 }
 
-.logo {
-    height: 50px;
+nav h1 {
+    margin: 0;
 }
 
-nav a {
-    color: #e0e0e0;
-    margin: 0 15px;
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
 }
 
-nav a:hover {
-    color: #1e88e5;
-}
-
-/* Hero Section */
-.hero {
-    background: url('images/hero-background.jpg') no-repeat center center;
-    background-size: cover;
-    color: #ffffff;
+.banner {
+    background-color: #f4f4f4;
+    padding: 50px;
     text-align: center;
-    padding: 150px 20px;
-    position: relative;
 }
 
-.hero-content {
-    max-width: 600px;
-    margin: 0 auto;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-.hero h1 {
-    font-size: 3.5em;
-    margin-bottom: 10px;
-    color: #FFD700;
-}
-
-.hero p {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
-
-button {
-    background-color: #FFD700;
-    color: #121212;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-button:hover {
-    background-color: #FFC107;
-    transform: translateY(-5px);
-}
-
-/* Featured Books */
-.featured-books {
-    padding: 40px 20px;
-    background-color: #1e1e1e;
-}
-
-.featured-books h2 {
-    color: #1e88e5;
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 40px;
-}
-
-.book-container {
+.product-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    justify-content: space-around;
 }
 
-.book {
-    background-color: #2c2c2c;
-    padding: 20px;
-    border-radius: 15px;
-    width: 250px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-    cursor: pointer;
-}
-
-.book:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-}
-
-.book img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.book h3 {
-    font-size: 1.4em;
-    margin: 15px 0;
-}
-
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 100;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-.modal-content {
-    background-color: #1e1e1e;
-    margin: auto;
-    padding: 20px;
-    border-radius: 10px;
-    width: 60%;
-    max-width: 800px;
-}
-
-.close {
-    color: #ffffff;
-    float: right;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.book-details {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.book-details img {
+.product-list .product-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
     width: 200px;
-    border-radius: 10px;
+    text-align: center;
 }
 
 footer {
-    background-color: #1e1e1e;
-    padding: 10px;
+    background-color: #333;
+    color: white;
     text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+}
+
+form label {
+    margin: 5px 0;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
 }

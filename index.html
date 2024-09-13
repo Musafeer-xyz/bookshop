@@ -3,55 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mustaqeem Bookshop</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Mustaqeem Bookstore</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="Mustaqeem Bookshop Logo" class="logo">
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Catalog</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact</a>
+            <h1>Mustaqeem Bookstore</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Welcome to Mustaqeem Bookshop</h1>
-                <p>“The seeking of knowledge is obligatory for every Muslim.” - Hadith</p>
-                <button id="shopNow">Shop Now</button>
+        <section id="home">
+            <div class="banner">
+                <h2>Welcome to Mustaqeem Bookstore</h2>
+                <p>Your one-stop shop for Islamic literature.</p>
             </div>
         </section>
 
-        <section class="featured-books">
+        <section id="products">
             <h2>Featured Books</h2>
-            <div id="bookContainer" class="book-container">
-                <!-- Dynamic content will be injected here -->
+            <div class="product-list">
+                <!-- Product items will be inserted here by JavaScript -->
             </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
         </section>
     </main>
 
-    <!-- Book Modal -->
-    <div id="bookModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="book-details">
-                <img id="modalBookCover" src="" alt="Book Cover">
-                <h3 id="modalBookTitle"></h3>
-                <p id="modalBookAuthor"></p>
-                <p id="modalBookDescription"></p>
-            </div>
-        </div>
-    </div>
-
     <footer>
-        <p>&copy; 2024 Mustaqeem Bookshop. All rights reserved.</p>
+        <p>&copy; 2024 Mustaqeem Bookstore. All rights reserved.</p>
     </footer>
 
-    <script src="js/scripts.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
